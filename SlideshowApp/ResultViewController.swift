@@ -11,12 +11,14 @@ import UIKit
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var ImageView: UIImageView!
+    //画像配列
+    let imageNameArray = ["stamp_g01","stamp_g02","stamp_g03","stamp_g04","stamp_g05"]
     
     var No:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let imageNameArray = ["stamp_g01","stamp_g02","stamp_g03","stamp_g04","stamp_g05"]
+
                // 表示している画像の番号から名前を取り出し
                let name = imageNameArray[No]
 
