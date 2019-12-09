@@ -27,6 +27,7 @@ class ResultViewController: UIViewController {
 
                // Image Viewに読み込んだ画像をセット
                ImageView.image = image
+               
 
         // Do any additional setup after loading the view.
     }

@@ -113,8 +113,26 @@ class ViewController: UIViewController {
         displayImage()
  
     }
+    
     //画面にデータを渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        //ボタンのtitle取得
+        btntitle = Onoutbtn.currentTitle!
+        //タイマー停止処理
+        if self.timer != nil {
+            self.timer.invalidate()   // タイマーを停止する
+            self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
+        }
+        if btntitle == "停止"{
+            //ボタンのtitle変更
+            Onoutbtn.setTitle("再生", for: .normal)
+            //進む、戻るボタン使用不可
+            Nextbtn.isEnabled = true
+            Backbtn.isEnabled = true
+            
+        }
+        
         // segueから遷移先のResultViewControllerを取得
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
             // 遷移先に値を代入して渡す
@@ -124,7 +142,7 @@ class ViewController: UIViewController {
     }
     //戻る処理
     @IBAction func unwind(_ segue:UIStoryboardSegue){
-        
+      
     }
 }
 
