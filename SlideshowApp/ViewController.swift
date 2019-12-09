@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var timer: Timer!
     // タイマー用の時間のための変数
     //var timer_sec: Float = 0
+    //画像配列
+    let imageNameArray = ["stamp_g01","stamp_g02","stamp_g03","stamp_g04","stamp_g05"]
     
     @IBOutlet weak var ImageView: UIImageView!
     
@@ -83,7 +85,7 @@ class ViewController: UIViewController {
 
     //　画像の変更用
   func displayImage(){
-        let imageNameArray = ["stamp_g01","stamp_g02","stamp_g03","stamp_g04","stamp_g05"]
+        
         // 表示している画像の番号から名前を取り出し
         let name = imageNameArray[dispImageNo]
 
